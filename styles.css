@@ -5,6 +5,8 @@
 }
 header{
     background-color: rgba(0,0,0,0.3);
+    z-index: 50;
+ 
 }
 header button{
     height: 40px;
