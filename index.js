@@ -2,6 +2,10 @@
 const aboutButton = document.getElementById("aboutButton");
 const projectButton = document.getElementById("projectButton");
 const homeButton = document.getElementById("homeButton");
+const certificationsButton = document.getElementById("certificationsButton");
+
+
+
 // About button click
 if (aboutButton) {
   aboutButton.addEventListener("click", () => {
@@ -20,6 +24,22 @@ if (projectButton) {
       projectSection.scrollIntoView({ behavior: "smooth" });
     }
   });
+}
+
+if (certificationsButton) {
+  certificationsButton.addEventListener("click", () => {
+    const certificationSection = document.getElementById("certificationSection");
+    if (certificationSection) {
+      certificationSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
+
+if(homeButton){
+  homeButton.addEventListener('click',()=>{
+    window.scrollTo({top:0,behavior:'smooth'})
+  })
+ 
 }
 
 if(homeButton){

@@ -21,6 +21,7 @@
         <button id="homeButton">Home</button>
         <button id="aboutButton">About</button>
         <button id="projectButton">Projects</button>
+        <button id="certificationsButton">Certifications</button>
         <button>Contact</button>
       </div>
     </header>
@@ -62,9 +63,9 @@
     <!-- About me -->
     <section  id="aboutMeSection"  class="w-full h-[55vh] flex">
       <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll">
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Website Development</div>
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">Frontend</div>
-        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5">React app</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Website Development</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Frontend</div>
+        <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">React app</div>
       </div>
       <div class="w-7/12 h-full max-w-4xl flex flex-col p-14 gap-4 items-left justify-center animateOnScroll">
         <h1 class="text-3xl font-semibold"><span class="underline decoration-blue-500 decoration-3">About me</span></h1>
@@ -119,10 +120,40 @@
       </div>
 
     </section>
-
+    <!-- Cerifications -->
+     <section id="certificationSection" class="w-full h-auto flex flex-col justify-center items-center py-12">
+        <h1 class="text-3xl font-semibold my-6">Certifications</h1>
+        <!-- UI -->
+        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
+          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">UI Design</span> – Scrimba</h1>
+          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/UI.jpg" alt="UI Design Cerification">
+        </div>
+        <!-- Tailwind -->
+        <div class="w-full flex flex-col justify-center items-center animateOnScroll">
+          <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Tailwind CSS</span> – Scrimba</h1>
+          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Tailwind.jpg" alt="Tailwind Design Cerification">
+        </div>        
+     </section>
     <!-- Contact section -->
-    <section class="w-full h-auto flex flex-col justify-center items-center">
+    <section class="w-full h-auto flex flex-col justify-center items-center py-12 bg-gray-800 ">
       <h1 class="text-3xl font-semibold my-6">Contact information</h1>
+      <div class="w-full h-auto flex justify-evenly items-center animateOnScroll">
+        <!-- Github -->
+        <div class="w-1/6 h-[25vh] py-12 flex flex-col items-center gap-6 cursor-pointer rounded-md hover:bg-gray-700 transition duration-300 ease-in-out">
+          <img class="w-24" src="resources/github.png" alt="Github Logo">
+          <h1 class="text-2xl">Github</h1>
+        </div>
+        <!-- Mail -->
+        <div class="w-1/6 h-[25vh] py-12 flex flex-col items-center gap-6 cursor-pointer rounded-md hover:bg-gray-700 transition duration-300 ease-in-out">
+          <img class="w-24" src="resources/mail.png" alt="Email Logo">
+          <h1 class="text-2xl">Email</h1>
+        </div>
+        <!-- Linked in -->
+        <div class="w-1/6 h-[25vh] py-12 flex flex-col items-center gap-6 cursor-pointer rounded-md hover:bg-gray-700 transition duration-300 ease-in-out">
+          <img class="w-24" src="resources/linkedin.png" alt="linkedin Logo">
+          <h1 class="text-2xl">LinkedIn</h1>
+        </div>
+      </div>
     </section>
   <script src="index.js"></script>
   </body>
