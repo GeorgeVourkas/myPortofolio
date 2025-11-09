@@ -15,20 +15,31 @@
   </head>
 
   <body class="bg-gray-900">
-    <header class="sticky top-0 w-full h-16 flex justify-between items-center px-12 ">
-      <h1 class="text-xl font-semibold">George Vourkas</h1>
-      <div class="buttonWrap h-full font-medium flex gap-6">
-        <button id="homeButton">Home</button>
-        <button id="aboutButton">About</button>
-        <button id="projectButton">Projects</button>
-        <button id="certificationsButton">Certifications</button>
-        <button>Contact</button>
-      </div>
-    </header>
+  <header class="sticky top-0 w-full h-[7vh] flex justify-between items-center px-12 ">
+    <h1 class="text-xl font-semibold">George Vourkas</h1>
+    <div class="buttonWrap h-full font-medium flex gap-6 max-[650px]:hidden">
+      <button id="homeButton">Home</button>
+      <button id="aboutButton">About</button>
+      <button id="projectButton">Projects</button>
+      <button id="certificationsButton">Certifications</button>
+      <button id="contactButton">Contact</button>
+    </div>
+    <button id="menuButton" class="hidden max-[650px]:block">☰</button>
+  </header>
 
-    <main class="w-full h-[50vh] flex flex-row">
-      <div class="w-1/2 h-full">
-        <div class="w-full h-3/4 flex flex-col justify-center items-center">
+  <!-- Mobile Menu -->
+  <div class="menu" id="mobileMenu">
+      <button class="mobileButton" data-target="homeSection">Home</button>
+      <button class="mobileButton" data-target="aboutMeSection">About</button>
+      <button class="mobileButton" data-target="projectSection">Projects</button>
+      <button class="mobileButton" data-target="certificationSection">Certifications</button>
+      <button class="mobileButton" data-target="contactSection">Contact</button>
+  </div>
+
+
+    <main class="w-full h-[50vh] flex flex-row max-[650px]:flex-col-reverse max-[650px]:h-auto">
+      <div class="w-1/2 h-full py-16 max-[650px]:w-full">
+        <div class="w-full h-3/4 flex flex-col justify-center items-center max-[650px]:mb-14">
           <div class="animateOnScroll">
             <h1 class="font-semibold text-4xl">Hello.</h1>
             <h2 class="font-medium text-2xl">
@@ -46,8 +57,8 @@
         </div>
       </div>
 
-      <div class="w-1/2 h-full flex justify-center items-center">
-        <img src="resources/profile.jpg" alt="Profile Photo" class="h-5/6 rounded-full" />
+      <div class="w-1/2 h-full flex justify-center items-center max-[650px]:w-full max-[650px]:h-auto max-[650px]:pt-16">
+        <img src="resources/profile.jpg" alt="Profile Photo" class="h-5/6 rounded-full max-[650px]:w-4/6" />
       </div>
     </main>
 
@@ -61,13 +72,13 @@
     </section>
 
     <!-- About me -->
-    <section  id="aboutMeSection"  class="w-full h-[55vh] flex">
-      <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll">
+    <section  id="aboutMeSection"  class="w-full h-[55vh] flex max-[650px]:h-auto max-[650px]:flex-col">
+      <div class="w-5/12 h-full flex flex-col justify-evenly items-center py-4 animateOnScroll max-[650px]:w-full max-[650px]:h-[30vh]">
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Website Development</div>
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">Frontend</div>
         <div class="w-2/4 h-1/4 border-l-4 border-blue-500 flex items-center pl-5 text-lg">React app</div>
       </div>
-      <div class="w-7/12 h-full max-w-4xl flex flex-col p-14 gap-4 items-left justify-center animateOnScroll">
+      <div class="w-7/12 h-full max-w-4xl flex flex-col p-14 gap-4 items-left justify-center animateOnScroll max-[650px]:w-full max-[650px]:h-1/2">
         <h1 class="text-3xl font-semibold"><span class="underline decoration-blue-500 decoration-3">About me</span></h1>
         <p>I’m George from Thessaloniki, Greece, an inspiring Front-End Software Developer. 
           I’m passionate about crafting intuitive and engaging digital experiences that people enjoy 
@@ -82,7 +93,7 @@
       <div id="projectSection" class="w-full flex flex-col justify-center items-center">
         <h1 class="text-3xl font-semibold my-6 animateOnScroll">Experience & Projects</h1>
         <!-- Printing Office -->
-         <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-800">
+         <div class="w-full h-auto p-12 flex flex-col justify-center items-center bg-gray-800">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Printing Office Website</span> – Professional Experience, Mobile-Responsive</h1>
           <p class="max-w-6xl animateOnScroll mb-14">As part of my professional experience, 
             I developed a multi-page, mobile-responsive website for a printing office in 
@@ -95,7 +106,7 @@
           <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/inprint2.png" alt="printing office site photo 2">
         </div>    
         <!-- Ai recipe generator -->
-        <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-700">
+        <div class="w-full h-auto p-12 flex flex-col justify-center items-center bg-gray-700">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">AI Recipe Generator</span> – Cook with What You Have</h1>
           <p class="max-w-6xl animateOnScroll mb-14">
             Built with React and powered by the Claude AI API, 
@@ -106,7 +117,7 @@
           <img class="w-11/12 max-w-4xl rounded-md animateOnScroll" src="resources/aiChef.png" alt="Ai chef photo">
         </div>    
         <!-- Weather App -->
-        <div class="w-full h-auto p-14 flex flex-col justify-center items-center bg-gray-600">
+        <div class="w-full h-auto p-12 flex flex-col justify-center items-center bg-gray-650">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Weather App</span> – Simple & Accurate Weather Updates</h1>
           <p class="max-w-6xl animateOnScroll mb-14">Built with React and powered by the OpenWeather API, 
             this app provides real-time weather information for your location. 
@@ -126,18 +137,18 @@
         <!-- UI -->
         <div class="w-full flex flex-col justify-center items-center animateOnScroll">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">UI Design</span> – Scrimba</h1>
-          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/UI.jpg" alt="UI Design Cerification">
+          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/UI.jpg" alt="UI Design Cerification">
         </div>
         <!-- Tailwind -->
         <div class="w-full flex flex-col justify-center items-center animateOnScroll">
           <h1 class="text-2xl font-semibold mb-5"><span class="underline decoration-blue-500 decoration-3">Tailwind CSS</span> – Scrimba</h1>
-          <img class="w-11/12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Tailwind.jpg" alt="Tailwind Design Cerification">
+          <img class="w-11/12 p-12 max-w-4xl rounded-md mb-5 animateOnScroll" src="resources/Tailwind.jpg" alt="Tailwind Design Cerification">
         </div>        
      </section>
     <!-- Contact section -->
-    <section class="w-full h-auto flex flex-col justify-center items-center py-12 bg-gray-800 ">
+    <section id="contactSection" class="w-full h-auto flex flex-col justify-center items-center py-24 bg-gray-800 ">
       <h1 class="text-3xl font-semibold my-6">Contact information</h1>
-      <div class="w-full h-auto flex justify-evenly items-center animateOnScroll">
+      <div class="w-full h-auto flex justify-evenly items-center animateOnScroll flex-row max-[650px]:flex-col">
         <!-- Github -->
         <div class="w-1/6 h-[25vh] py-12 flex flex-col items-center gap-6 cursor-pointer rounded-md hover:bg-gray-700 transition duration-300 ease-in-out">
           <img class="w-24" src="resources/github.png" alt="Github Logo">

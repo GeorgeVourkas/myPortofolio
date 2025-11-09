@@ -3,9 +3,8 @@ const aboutButton = document.getElementById("aboutButton");
 const projectButton = document.getElementById("projectButton");
 const homeButton = document.getElementById("homeButton");
 const certificationsButton = document.getElementById("certificationsButton");
-
-
-
+const contactButton = document.getElementById("contactButton");
+const menuButton = document.getElementById("menuButton");
 // About button click
 if (aboutButton) {
   aboutButton.addEventListener("click", () => {
@@ -16,7 +15,7 @@ if (aboutButton) {
   });
 }
 
-// Projects button click
+
 if (projectButton) {
   projectButton.addEventListener("click", () => {
     const projectSection = document.getElementById("projectSection");
@@ -35,12 +34,15 @@ if (certificationsButton) {
   });
 }
 
-if(homeButton){
-  homeButton.addEventListener('click',()=>{
-    window.scrollTo({top:0,behavior:'smooth'})
-  })
- 
+if (contactButton) {
+  contactButton.addEventListener("click", () => {
+    const contactSection = document.getElementById("contactSection");
+    if (certificationSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 }
+
 
 if(homeButton){
   homeButton.addEventListener('click',()=>{
@@ -48,6 +50,22 @@ if(homeButton){
   })
  
 }
+
+if(menuButton){
+  menuButton.addEventListener('click', () => {
+    const menuSection = document.getElementById("mobileMenu");
+    menuSection.classList.toggle("show"); // toggle the menu
+
+    // Prevent scrolling when menu is open
+    if(menuSection.classList.contains("show")){
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+
 
 // Animation
 
