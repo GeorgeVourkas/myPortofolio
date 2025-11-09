@@ -3,6 +3,9 @@
     font-family: inter;
     color: #f9ffff;
 }
+a{
+    text-decoration: none;
+}
 header{
     background-color: rgba(0,0,0,0.3);
     z-index: 50;
@@ -29,9 +32,10 @@ header button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     top: -100vh;
     transition: top 0.5s ease-in-out; /* animate top property */
+    gap: 15px;
 }
 .menu.show {
   top: 0; /* slide down into view */
@@ -42,6 +46,7 @@ header button:hover{
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 15px;
+    font-size:1.5rem;
 }
 .menu button:hover{
     background-color: #3B82F6;
@@ -53,6 +58,20 @@ header button:hover{
     align-items: center;
     justify-content: space-evenly;
     gap: 40px;
+}
+.infoButtons{
+    border:2px solid #3B82F6;
+    border-radius: 5px;
+    width: 120px;
+    height: 45px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.infoButtons:hover{
+    background-color: #3B82F6;
+    transition: 0.3S ease-in-out;
 }
 
 .decore p{
